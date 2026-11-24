@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonBreadcrumb, IonBreadcrumbs, IonSearchbar } from '@ionic/react';
+import { IonContent, IonAvatar, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonSearchbar, IonBreadcrumbs, IonBreadcrumb, IonAccordionGroup, IonAccordion, IonItem, IonLabel } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
@@ -7,32 +7,60 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle className="apresentacao">APRESENTAÇÃO</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
+        <IonHeader className="cabecalho" collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Apresentação</IonTitle>
           </IonToolbar>
+          <IonAvatar>
+            {/* <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" /> */}
+            <img src="img/tecnologica1.png" alt="Fonte: Canva" />
+          </IonAvatar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        {/* <ExploreContainer name="Tab 1 page" /> */}
         <IonCard>
       <IonCardHeader>
-        <IonCardTitle>Título do cartão</IonCardTitle>
-        <IonCardSubtitle>Subtítulo do cartão</IonCardSubtitle>
+        <IonCardTitle className='titulo'>Tecno Lógica</IonCardTitle>
+        {/* <IonCardSubtitle>Subtítulo do cartão</IonCardSubtitle> */}
       </IonCardHeader>
 
-      <IonCardContent>Pequena descrição do cartão.</IonCardContent>
+      <IonCardContent>Programando um mundo melhor.</IonCardContent>
     </IonCard>
-    <IonBreadcrumbs>
-      <IonBreadcrumb href="#home">Início</IonBreadcrumb>
-      <IonBreadcrumb href="#electronics">Eletrônicos</IonBreadcrumb>
-      <IonBreadcrumb href="#cameras">Câmeras</IonBreadcrumb>
-      <IonBreadcrumb href="#film">Filme</IonBreadcrumb>
-    </IonBreadcrumbs>
     <IonSearchbar></IonSearchbar>
-      </IonContent>
+    <IonBreadcrumbs>
+      <IonBreadcrumb href="#home">Home</IonBreadcrumb>
+      <IonBreadcrumb href="#contato">Contato</IonBreadcrumb>
+    </IonBreadcrumbs>
+    <IonAccordionGroup>
+      <IonAccordion value="first">
+        <IonItem slot="header" color="light">
+          <IonLabel className="somos">Somos</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+          comprometidos com a sua ideia
+        </div>
+      </IonAccordion>
+      <IonAccordion value="second">
+        <IonItem slot="header" color="light">
+          <IonLabel className="fazemos">Fazemos</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+          por acreditar que é possível
+        </div>
+      </IonAccordion>
+      <IonAccordion value="third">
+        <IonItem slot="header" color="light">
+          <IonLabel className="alcancamos">Alcançamos</IonLabel>
+        </IonItem>
+        <div className="ion-padding" slot="content">
+          resultados que fazem a diferença
+        </div>
+      </IonAccordion>
+    </IonAccordionGroup>
+    </IonContent>
     </IonPage>
   );
 };

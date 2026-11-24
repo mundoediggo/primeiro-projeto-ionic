@@ -1,0 +1,27 @@
+.apresentacao{
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    color: beige;
+    background-color: black;
+}
+.cabecalho{
+    display: flex;
+}
+.titulo{
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+}
+.somos{
+    font-weight: bold;
+}
+.fazemos{
+    font-weight: bold;
+}
+.alcancamos{
+    font-weight: bold;
+}
+.ion-padding{
+    font-style: italic;
+}
